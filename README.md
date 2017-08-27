@@ -7,6 +7,11 @@ docker image with  [Google Puppeteer](https://github.com/GoogleChrome/puppeteer)
 
 ```
 docker pull alekzonder/puppeteer:latest
+# OR
+docker pull alekzonder/puppeteer:0.10.0
+# OR
+docker pull alekzonder/puppeteer:0.9.0
+
 ```
 
 ## before usage
