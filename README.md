@@ -2,6 +2,13 @@
 
 docker image with  [Google Puppeteer](https://github.com/GoogleChrome/puppeteer) installed
 
+## docker tags
+
+- latest
+- 0 - for zero version
+- 0.10.1
+- 0.10.0
+- 0.9.0
 
 ## install
 
@@ -10,7 +17,7 @@ docker pull alekzonder/puppeteer:latest
 # OR
 docker pull alekzonder/puppeteer:0.10.0
 # OR
-docker pull alekzonder/puppeteer:0.9.0
+docker pull alekzonder/puppeteer:0
 
 ```
 
