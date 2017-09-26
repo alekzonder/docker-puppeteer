@@ -6,12 +6,15 @@ and [screenshots scripts](#screenshots)
 
 ## docker tags
 
-- latest
-- 0 - for zero version
-- 0.10.2
-- 0.10.1
-- 0.10.0
-- 0.9.0
+- `latest`
+
+### `0` zero version
+
+- `0.11.0`
+- `0.10.2`
+- `0.10.1`
+- `0.10.0`
+- `0.9.0`
 
 ## install
 
