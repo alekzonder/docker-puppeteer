@@ -59,8 +59,12 @@ const puppeteer = require('puppeteer');
 docker run --shm-size 1G --rm -v <path_to_script>:/app/index.js alekzonder/puppeteer:latest
 ```
 
+3. If you're seeing random navigation errors (unreachable url) it's likely due to ipv6 being enabled in docker. Navigation errors are caused by ERR_NETWORK_CHANGED (-21) in chromium. Disable ipv6 in your container using `--sysctl net.ipv6.conf.all.disable_ipv6=1` to fix:
+```bash
+docker run --shm-size 1G --sysctl net.ipv6.conf.all.disable_ipv6=1 --rm -v <path_to_script>:/app/index.js alekzonder/puppeteer:latest
+```
 
-3. add `--enable-logging` for chrome debug logging http://www.chromium.org/for-testers/enable-logging
+4. add `--enable-logging` for chrome debug logging http://www.chromium.org/for-testers/enable-logging
 
 ```js
 const puppeteer = require('puppeteer');
