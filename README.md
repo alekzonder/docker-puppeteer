@@ -8,8 +8,8 @@ and [screenshots scripts](#screenshots)
 
 - `latest`
 
-### `0` zero version
-
+### `0.x`
+- `0`
 - `0.11.0`
 - `0.10.2`
 - `0.10.1`
