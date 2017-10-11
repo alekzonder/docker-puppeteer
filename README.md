@@ -100,9 +100,15 @@ docker run --shm-size 1G --rm \
  node my_script.js
 ```
 
-## screenshots
+## screenshots tools
 
 simple screenshot tools in image
+
+```bash
+docker run --shm-size 1G --rm -v /tmp/screenshots:/screenshots \
+ alekzonder/puppeteer:latest \
+ <screenshot,full_screenshot,screenshot_series,full_screenshot_series> 'https://www.google.com' 1366x768
+```
 
 ### `screenshot`
 
@@ -129,11 +135,29 @@ got screenshot in /tmp/screenshots/screenshot_1366_768.png
 
 save full screenshot of page
 
+```bash
+docker run --shm-size 1G --rm -v /tmp/screenshots:/screenshots \
+ alekzonder/puppeteer:latest \
+ full_screenshot 'https://www.google.com' 1366x768
+```
+
 ### `screenshot_series`, `full_screenshot_series`
 
 adds datetime in ISO format into filename
 
 useful for cron screenshots
+
+```bash
+docker run --shm-size 1G --rm -v /tmp/screenshots:/screenshots \
+ alekzonder/puppeteer:latest \
+ screenshot_series 'https://www.google.com' 1366x768
+```
+
+```bash
+docker run --shm-size 1G --rm -v /tmp/screenshots:/screenshots \
+ alekzonder/puppeteer:latest \
+ full_screenshot_series 'https://www.google.com' 1366x768
+```
 
 ```
 2017-09-01T05:08:55.027Z_screenshot_1366_768.png
