@@ -10,6 +10,7 @@ and [screenshots scripts](#screenshots)
 
 ### `0.x`
 - `0`
+- `0.12.0`
 - `0.11.0`
 - `0.10.2`
 - `0.10.1`
@@ -21,7 +22,7 @@ and [screenshots scripts](#screenshots)
 ```
 docker pull alekzonder/puppeteer:latest
 # OR
-docker pull alekzonder/puppeteer:0.10.0
+docker pull alekzonder/puppeteer:0.12.0
 # OR
 docker pull alekzonder/puppeteer:0
 
