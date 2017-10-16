@@ -7,8 +7,6 @@ and [screenshots scripts](#screenshots)
 ## docker tags
 
 - `latest`
-
-### `0.x`
 - `0`
 - `0.12.0`
 - `0.11.0`
