@@ -2,7 +2,7 @@
 
 docker image with  [Google Puppeteer](https://github.com/GoogleChrome/puppeteer) installed
 
-and [screenshots scripts](#screenshots)
+and [screenshots scripts](#screenshots-tools)
 
 ## docker tags
 
