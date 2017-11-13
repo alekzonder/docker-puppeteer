@@ -57,7 +57,7 @@ let filename = `screenshot_${width}_${height}.png`;
         isMobile
     });
 
-    await page.goto(url, {waitUntil: 'networkidle'});
+    await page.goto(url, {waitUntil: 'networkidle2'});
 
     await page.screenshot({path: `/screenshots/${filename}`, fullPage: false});
 

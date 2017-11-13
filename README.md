@@ -8,6 +8,7 @@ and [screenshots scripts](#screenshots-tools)
 
 - `latest`
 - `0`
+- `0.13.0`
 - `0.12.0`
 - `0.11.0`
 - `0.10.2`
@@ -20,7 +21,7 @@ and [screenshots scripts](#screenshots-tools)
 ```
 docker pull alekzonder/puppeteer:latest
 # OR
-docker pull alekzonder/puppeteer:0.12.0
+docker pull alekzonder/puppeteer:0.13.0
 # OR
 docker pull alekzonder/puppeteer:0
 
@@ -45,7 +46,7 @@ const puppeteer = require('puppeteer');
 
     const page = await browser.newPage();
 
-    await page.goto('https://www.google.com/', {waitUntil: 'networkidle'});
+    await page.goto('https://www.google.com/', {waitUntil: 'networkidle2'});
 
     browser.close();
 
