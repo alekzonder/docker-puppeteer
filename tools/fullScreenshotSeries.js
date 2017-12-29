@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+function sleep(ms) {
+    return new Promise(resolve => {if (ms > 0) {setTimeout(resolve,ms)}})
+}
+
 process.on('uncaughtException', (error) => {
     console.error(error);
     process.exit(1);
@@ -36,6 +40,12 @@ if (typeof process.argv[3] === 'string') {
     var [width, height] = process.argv[3].split('x').map(v => parseInt(v, 10));
 }
 
+var delay = 0;
+
+if (typeof process.argv[4] === 'string') {
+    delay = parseInt(process.argv[4], 10);
+}
+
 var isMobile = false;
 
 let filename = `${dateStr}_full_screenshot_${width}_${height}.png`;
@@ -58,6 +68,8 @@ let filename = `${dateStr}_full_screenshot_${width}_${height}.png`;
     });
 
     await page.goto(url, {waitUntil: 'networkidle2'});
+
+    await sleep(delay);
 
     await page.screenshot({path: `/screenshots/${filename}`, fullPage: true});
 

@@ -112,6 +112,13 @@ docker run --shm-size 1G --rm -v /tmp/screenshots:/screenshots \
  <screenshot,full_screenshot,screenshot_series,full_screenshot_series> 'https://www.google.com' 1366x768
 ```
 
+### screenshot tools syntax
+
+`<tool> <url> <width>x<height> [<delay_in_ms>]`
+
+* `delay_in_ms`: is optional (defaults to `0`)
+  * Waits for `delay_in_ms` milliseconds before taking the screenshot
+
 ### `screenshot`
 
 ```bash
