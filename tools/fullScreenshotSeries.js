@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 function sleep(ms) {
-    return new Promise(resolve => {if (ms > 0) {setTimeout(resolve,ms)}})
+    ms = (ms) ? ms : 0;
+    return new Promise(resolve => {setTimeout(resolve, ms);});
 }
 
 process.on('uncaughtException', (error) => {
