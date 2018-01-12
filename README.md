@@ -9,6 +9,8 @@ and [screenshots scripts](#screenshots-tools)
 ## docker tags
 
 - `latest`
+- `1`
+- `1.0.0`
 - `0`
 - `0.13.0`
 - `0.12.0`
@@ -23,9 +25,9 @@ and [screenshots scripts](#screenshots-tools)
 ```
 docker pull alekzonder/puppeteer:latest
 # OR
-docker pull alekzonder/puppeteer:0.13.0
+docker pull alekzonder/puppeteer:1.0.0
 # OR
-docker pull alekzonder/puppeteer:0
+docker pull alekzonder/puppeteer:1
 
 ```
 
