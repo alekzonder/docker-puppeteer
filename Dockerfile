@@ -17,9 +17,9 @@ ENV NODE_PATH="/usr/local/share/.config/yarn/global/node_modules:${NODE_PATH}"
 
 ENV PATH="/tools:${PATH}"
 
-ADD ./tools /tools
+RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser
 
-RUN chmod +x /tools/* && mkdir /screenshots
+COPY --chown=pptruser:pptruser ./tools /tools
 
 # Set language to UTF8
 ENV LANG="C.UTF-8"
@@ -27,8 +27,8 @@ ENV LANG="C.UTF-8"
 WORKDIR /app
 
 # Add user so we don't need --no-sandbox.
-RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-    && mkdir -p /home/pptruser/Downloads \
+RUN mkdir /screenshots \
+	&& mkdir -p /home/pptruser/Downloads \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /usr/local/share/.config/yarn/global/node_modules \
     && chown -R pptruser:pptruser /screenshots \
