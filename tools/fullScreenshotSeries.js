@@ -24,7 +24,7 @@ if (!process.argv[2]) {
 
     console.info('for example:\n');
     console.log('  docker run --shm-size 1G --rm -v /tmp:/screenshots \\');
-    console.log('  alekzonder/puppeteer:latest screenshot \'https://www.google.com\'\n');
+    console.log('  meetsmore/puppeteer:latest screenshot \'https://www.google.com\'\n');
     process.exit(1);
 }
 

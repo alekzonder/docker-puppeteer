@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t alekzonder/puppeteer:latest .
+docker build -t meetsmore/puppeteer:latest .
