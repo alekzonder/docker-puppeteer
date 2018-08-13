@@ -21,6 +21,9 @@ ADD ./tools /tools
 
 RUN chmod +x /tools/* && mkdir /screenshots
 
+# Set language to UTF8
+ENV LANG="C.UTF-8"
+
 WORKDIR /app
 
 # Add user so we don't need --no-sandbox.
