@@ -5,3 +5,4 @@ services:
 
 script:
   - ./sh/build.sh
+  - docker run --shm-size 1G --rm -v ./examples/minimal-example.js:/app/index.js alekzonder/puppeteer:latest
