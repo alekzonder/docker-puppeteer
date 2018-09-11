@@ -1,0 +1,10 @@
+language: minimal
+
+services:
+  - docker
+
+install:
+  - ./sh/build.sh
+
+script:
+  - docker run --shm-size 1G --rm -v `pwd`/examples/minimal.js:/app/index.js alekzonder/puppeteer:latest
