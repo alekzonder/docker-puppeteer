@@ -1,4 +1,7 @@
 language: minimal
 
+services:
+  - docker
+
 script:
   - ./sh/build.sh
