@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
     '--disable-setuid-sandbox'
   ]});
   const page = await browser.newPage();
-  await page.goto('https://www.google.com/', { waitUntil: 'networkidle' });
+  await page.goto('https://www.google.com/', { waitUntil: 'networkidle2' });
   await browser.close();
   
 })();
