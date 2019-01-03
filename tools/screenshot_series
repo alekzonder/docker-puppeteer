@@ -1,3 +1,0 @@
-#!/bin/bash
-
-env node /tools/screenshotSeries.js "$@"
