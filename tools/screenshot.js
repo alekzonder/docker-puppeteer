@@ -57,7 +57,8 @@ let filename = `screenshot_${width}_${height}.png`;
         args: [
         '--no-sandbox',
         '--disable-setuid-sandbox'
-        ]
+        ],
+        ignoreHTTPSErrors: true
     });
 
     const page = await browser.newPage();
